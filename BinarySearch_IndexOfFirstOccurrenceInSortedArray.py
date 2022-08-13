@@ -1,4 +1,4 @@
-def firstIndex(l, x):
+def firstIndex(l, x) -> int:
     low = 0
     high = len(l) - 1
     while low <= high:

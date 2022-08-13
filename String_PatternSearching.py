@@ -1,4 +1,4 @@
-def patternSearch(txt, pattern):
+def patternSearch(txt, pattern) -> list[int]:
     pos = txt.find(pattern)
     res = []
     while pos >= 0:

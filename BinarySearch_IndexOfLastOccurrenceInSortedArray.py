@@ -1,4 +1,4 @@
-def lastIndex(l, x):
+def lastIndex(l, x) -> int:
     low = 0
     high = len(l) - 1
     while low <= high:
