@@ -2,9 +2,10 @@ class Node:
     def __init__(self, K: int) -> None:
         self.key = K
         self.next = None
+        self.prev = None
 
 
-class Queue:
+class Deque:
     def __init__(self) -> None:
         self.front = None
         self.rear = None
@@ -16,22 +17,17 @@ class Queue:
     def isEmpty(self) -> bool:
         return self.sz == 0
 
-    def getFront(self) -> int:
-        return self.front.key
-
-    def getRear(self) -> int:
-        return self.rear.key
-
-    def enqueue(self, x: int) -> None:
+    def insertRear(self, x: int) -> None:
         temp = Node(x)
         if self.rear == None:
             self.front = temp
         else:
             self.rear.next = temp
+            temp.prev = self.rear
         self.rear = temp
         self.sz += 1
 
-    def dequeue(self) -> int:
+    def deleteFront(self) -> int:
         if self.front == None:
             return None
         else:
@@ -39,15 +35,17 @@ class Queue:
             self.front = self.front.next
             if self.front == None:
                 self.rear = None
+            else:
+                self.front.prev = None
             self.sz -= 1
             return res
 
 
-q = Queue()
-q.enqueue(10)
-q.enqueue(20)
-q.enqueue(30)
-print(q.size())
-print(q.dequeue())
-print(q.dequeue())
-print(q.size())
+dq = Deque()
+dq.insertRear(10)
+dq.insertRear(20)
+dq.insertRear(30)
+print(dq.size())
+print(dq.deleteFront())
+print(dq.deleteFront())
+print(dq.size())
