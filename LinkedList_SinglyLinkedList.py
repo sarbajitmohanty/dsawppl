@@ -123,6 +123,14 @@ def recursiveReverseList(head: Node) -> Node:
     return restHead
 
 
+def recursiveReverseList2(curr: Node, prev: Node = None) -> Node:
+    if curr == None:
+        return prev
+    next = curr.next
+    curr.next = prev
+    return recursiveReverseList2(next, curr)
+
+
 # head = Node(10)
 # head.next = Node(20)
 # head.next.next = Node(15)
@@ -146,5 +154,5 @@ head = insertPos(head, 15, 2)
 # head = delFirst(head)
 # head = delLast(head)
 head = sortedInsert(head, 18)
-head = recursiveReverseList(head)
+head = recursiveReverseList2(head)
 printList(head)
