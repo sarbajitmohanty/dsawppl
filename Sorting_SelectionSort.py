@@ -1,5 +1,5 @@
 # not a stable sorting algorithm
-def selectionSort(l):
+def selectionSort(l: list[int]) -> None:
     n = len(l)
     for i in range(n - 1):
         min_indx = i

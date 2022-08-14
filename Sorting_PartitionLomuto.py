@@ -1,4 +1,4 @@
-def lomutoPartition(arr, l, h) -> int:
+def lomutoPartition(arr: list[int], l: int, h: int) -> int:
     pivot = arr[h]
     i = l - 1
     for j in range(l, h):

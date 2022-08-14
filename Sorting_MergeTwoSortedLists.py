@@ -1,4 +1,4 @@
-def mergeLists(a, b):
+def mergeLists(a: list[int], b: list[int]) -> list[int]:
     res = []
     m = len(a)
     n = len(b)

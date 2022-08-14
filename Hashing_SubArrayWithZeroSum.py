@@ -1,4 +1,4 @@
-def isZeroSum(array) -> bool:
+def isZeroSum(array: list[int]) -> bool:
     prefixSum = 0
     hashSet = set()
     for i in range(len(array)):

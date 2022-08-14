@@ -1,4 +1,4 @@
-def firstIndex(l, x) -> int:
+def firstIndex(l: list[int], x: int) -> int:
     low = 0
     high = len(l) - 1
     while low <= high:
@@ -15,7 +15,7 @@ def firstIndex(l, x) -> int:
     return -1
 
 
-def lastIndex(l, x) -> int:
+def lastIndex(l: list[int], x: int) -> int:
     low = 0
     high = len(l) - 1
     while low <= high:
@@ -32,7 +32,7 @@ def lastIndex(l, x) -> int:
     return -1
 
 
-def countOcc(l, x) -> int:
+def countOcc(l: list[int], x: int) -> int:
     first = firstIndex(l, x)
     if first == -1:
         return 0

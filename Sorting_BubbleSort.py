@@ -1,5 +1,5 @@
 # stable sorting algorithm
-def bubbleSort(l):
+def bubbleSort(l: list[int]) -> None:
     for i in range(len(l) - 1):
         swapped = False
         for j in range(len(l) - i - 1):

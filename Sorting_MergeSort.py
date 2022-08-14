@@ -1,4 +1,4 @@
-def merge(a, low, mid, high) -> None:
+def merge(a: list[int], low: int, mid: int, high: int) -> None:
     left = a[low: mid+1]
     right = a[mid+1: high+1]
     i, j = 0, 0
@@ -22,7 +22,7 @@ def merge(a, low, mid, high) -> None:
         j += 1
 
 
-def mergeSort(arr, l, r) -> None:
+def mergeSort(arr: list[int], l: int, r: int) -> None:
     if r > l:
         m = (l + r) // 2
         mergeSort(arr, l, m)

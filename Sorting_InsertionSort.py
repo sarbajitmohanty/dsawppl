@@ -1,5 +1,5 @@
 # stable sorting algorithm
-def insertionSort(l):
+def insertionSort(l: list[int]) -> None:
     for i in range(1, len(l)):
         x = l[i]
         j = i - 1

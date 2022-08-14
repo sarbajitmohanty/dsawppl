@@ -1,4 +1,4 @@
-def hoarePartition(arr, l, h) -> int:
+def hoarePartition(arr: list[int], l: int, h: int) -> int:
     pivot = arr[l]
     i = l - 1
     j = h + 1

@@ -1,13 +1,13 @@
 class HashMap:
-    def __init__(self, c) -> None:
+    def __init__(self, c: int) -> None:
         self.cap = c
         self.table = [-1] * c
         self.size = 0
 
-    def hash(self, x) -> int:
+    def hash(self, x: int) -> int:
         return x % self.cap
 
-    def insert(self, x) -> bool:
+    def insert(self, x: int) -> bool:
         if self.size == self.cap:
             return False
         if self.search(x) == True:
@@ -20,7 +20,7 @@ class HashMap:
         self.size = self.size + 1
         return True
 
-    def search(self, x) -> bool:
+    def search(self, x: int) -> bool:
         h = self.hash(x)
         t = self.table
         i = h
@@ -32,7 +32,7 @@ class HashMap:
                 return False
         return False
 
-    def remove(self, x) -> bool:
+    def remove(self, x: int) -> bool:
         h = self.hash(x)
         t = self.table
         i = h

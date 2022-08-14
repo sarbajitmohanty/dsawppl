@@ -1,4 +1,4 @@
-def partition(arr, p) -> None:
+def partition(arr: list[int], p: int) -> None:
     n = len(arr)
     arr[p], arr[n-1] = arr[n-1], arr[p]
     temp = []

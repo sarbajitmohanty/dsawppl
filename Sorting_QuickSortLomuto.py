@@ -1,4 +1,4 @@
-def lomutoPartition(arr, l, h) -> int:
+def lomutoPartition(arr: list[int], l: int, h: int) -> int:
     pivot = arr[h]
     i = l - 1
     for j in range(l, h):
@@ -9,7 +9,7 @@ def lomutoPartition(arr, l, h) -> int:
     return i+1
 
 
-def qSort(arr, l, h) -> None:
+def qSort(arr: list[int], l: int, h: int) -> None:
     if l < h:
         p = lomutoPartition(arr, l, h)
         qSort(arr, l, p-1)

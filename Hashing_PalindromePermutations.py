@@ -1,7 +1,7 @@
 from collections import Counter
 
 
-def isPalindromePermutations(string) -> bool:
+def isPalindromePermutations(string: str) -> bool:
     countFrequency = Counter(string)
     oddFrequency = 0
     for freq in countFrequency.values():

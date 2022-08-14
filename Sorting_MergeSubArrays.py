@@ -1,4 +1,4 @@
-def merge(a, low, mid, high):
+def merge(a: list[int], low: int, mid: int, high: int) -> None:
     left = a[low: mid+1]
     right = a[mid+1: high+1]
     i, j = 0, 0
