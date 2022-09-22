@@ -73,6 +73,19 @@ def levelOrder(root: TreeNode) -> None:
             q.append(node.right)
 
 
+def levelOrderList(root: TreeNode) -> list[list[int]]:
+    if not root:
+        return []
+    ans, level = [], [root]
+    while level:
+        ans.append([node.key for node in level])
+        temp = []
+        for node in level:
+            temp.extend([node.left, node.right])
+        level = [leaf for leaf in temp if leaf]
+    return ans
+
+
 def treeSize(root: TreeNode) -> int:
     if root == None:
         return 0
@@ -139,3 +152,5 @@ print()
 preorderIterative(root)
 print()
 levelOrder(root)
+print()
+print(levelOrderList(root))
